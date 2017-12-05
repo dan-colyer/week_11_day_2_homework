@@ -12,5 +12,14 @@ describe('Dinosaur', function () {
 
   it('Dinosaur has Type', function () {
   assert.strictEqual(dinosaur.type, "Triffid");
-});
+  });
+
+  it('Dinosaur has offspringPerYear', function () {
+  assert.strictEqual(dinosaur.offspringPerYear, 2);
+  });
+
+
+
+
+
 });
