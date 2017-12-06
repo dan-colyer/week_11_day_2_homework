@@ -6,4 +6,9 @@ Park.prototype.countDinosaurs = function () {
   return this.enclosure.length;
 }
 
+Park.prototype.addDinosaur = function (dinosaur) {
+  this.enclosure.push(dinosaur);
+}
+
+
 module.exports = Park;
