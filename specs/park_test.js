@@ -23,5 +23,18 @@ describe('Park', function () {
   assert.strictEqual(park.countDinosaurs(), 1);
   });
 
+  it('Enclosure Can Remove Dinosaur by Type', function () {
+    dinosaur1 = new Dinosaur("Triffid", 2);
+    dinosaur2 = new Dinosaur("Triffid", 2);
+    dinosaur3 = new Dinosaur("Goat", 20);
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.addDinosaur(dinosaur3);
+  assert.strictEqual(park.countDinosaurs(), 3);
+  park.removeDinosaursByType("Triffid")
+  assert.strictEqual(park.countDinosaurs(), 0);
+  });
+
+
 
 });
