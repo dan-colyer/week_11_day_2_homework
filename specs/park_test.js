@@ -35,6 +35,18 @@ describe('Park', function () {
   assert.strictEqual(park.countDinosaurs(), 0);
   });
 
+  it('Get Dino with Offspring more than 2', function () {
+    dinosaur1 = new Dinosaur("Triffid", 2);
+    dinosaur2 = new Dinosaur("Triffid", 3);
+    dinosaur3 = new Dinosaur("Goat", 20);
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.addDinosaur(dinosaur3);
+    result = park.dinoByOffspringCountGreaterThanTwo();
+  assert.strictEqual(result.length, 2);
+  });
+
+
 
 
 });

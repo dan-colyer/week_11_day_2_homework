@@ -18,6 +18,17 @@ Park.prototype.removeDinosaursByType = function (type) {
   }
 }
 
+Park.prototype.dinoByOffspringCountGreaterThanTwo = function () {
+  var dinoList = [];
+  for(var dino of this.enclosure) {
+    if (dino.offspringPerYear > 2) {
+      dinoList.push(dino);
+    }
+  }
+  return dinoList;
+}
+
+
 
 
 module.exports = Park;
